@@ -1,4 +1,6 @@
-const items = [
+import { ref } from 'vue'
+
+const items = ref([
   {
     id: 1,
     name: 'Camisa',
@@ -23,6 +25,7 @@ const items = [
     name: 'Toalha', 
     details: { description: 'Toalha Patriota', price: 20.0 }, 
     quantidade: 0 }
-]
+
+])
 
 export default items
