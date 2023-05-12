@@ -2,6 +2,8 @@
 import items from '@/_data/produtos'
 import { ref } from 'vue'
 
+const mostrar = ref(true)
+
 const carrinho = ref({
   items: [],
   
@@ -38,6 +40,12 @@ function adicionarItem(item) {
         </li>
       </ul>
     </div>
+    <div>
+    <button @click="mostrar =! mostrar">Mostrar</button>
+    <div v-if="mostrar">
+      {{ carrinho }}
+    </div>
+  </div>
   </main>
 </template>
 <style scoped></style>
